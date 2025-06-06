@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TorontoDBA - Frequently Asked Questions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="TorontoDBA Logo" class="logo">
+            </div>
+            <h1>Frequently Asked Questions</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can you help with slow database queries and performance issues?
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, this is exactly what we specialize in. We're quite good at identifying root causes and fixing query or server-level performance issues, assuming your hardware is appropriately sized. We can also help determine if your current hardware setup is adequate for your needs.</p>
+                </div>
+            </div>
+
+          
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    I'm running my database on non-server hardware. Can you still help?
+                </div>
+                <div class="faq-answer">
+                    <p>Performance optimization has limits when the underlying hardware isn't suited for database workloads. However, we're still happy to engage and can often recommend hardware upgrades within your budget. <a href="contact.html">Contact us</a> for a free 15-minute consultation to discuss your options, or book our $500 Health Check, which includes a hardware review component.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What types of database performance problems do you solve best?
+                </div>
+                <div class="faq-answer">
+                    <p>We excel at diagnosing and fixing query optimization issues, identifying bottlenecks in server configuration, and determining if hardware resources are properly allocated. These are concrete, solvable problems with clear root causes and solutions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I know if you're the right fit for my database issues?
+                </div>
+                <div class="faq-answer">
+                    <p>We're ideal for small to medium-sized businesses experiencing consistent performance problems that can be traced to specific queries, configurations, or hardware limitations. If you have mysterious, intermittent issues or enterprise-scale databases, you may need specialized support. <a href="contact.html">Contact us</a> to book a free 15-minute consultation to discuss your specific needs.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you offer any other services?
+                </div>
+                <div class="faq-answer">
+                    <p>Of course! Feel free to contact us and we can open a conversation about your needs and how we might help! We can offer emergency help, short term help for a migration or upgrade project, or, in certain cases, offer on call support for small and medium businesses that need occasional help with database support.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Where are you located?
+                </div>
+                <div class="faq-answer">
+                    <p>Toronto, Ontario, Canada</p>
+                </div>
+            </div>
+			<div class="faq-item">
+                <div class="faq-question">
+                    Do you work with very large enterprise databases?
+                </div>
+                <div class="faq-answer">
+                    <p>If your database size is measured in the tens of terabytes or your company is massive in scale, we're happy to try solving issues, but you really should have a qualified DBA on staff just to manage systems of that size. Large enterprises typically need dedicated database administrators for ongoing management.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    I don't like Teams, can't you just come in in person and do things?
+                </div>
+                <div class="faq-answer">
+                    <p>For locations within the Greater Toronto Area this can likely be arranged. Contact us: admin (at) torontodba (dot) ca with your details and we can discuss. For other locations in Canada, with prepaid travel expenses.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    I'm in the United States and I need help but you're in Canada. How does that work?
+                </div>
+                <div class="faq-answer">
+                    <p>We're able to support US businesses as well, and can bill in US dollars if that helps.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    I use Postgres, Oracle, MySQL, or something else as my database provider. Can you help?
+                </div>
+                <div class="faq-answer">
+                    <p>Our deep experience with Microsoft SQL Server and other products in the Microsoft ecosystem mean that you'd probably be better off in someone else's hands.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Will you be our IT department? We have a lot of printer issues.
+                </div>
+                <div class="faq-answer">
+                    <p>No, we specialize in database performance and don't provide general IT support.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <p>&copy; 2025 TorontoDBA</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = element.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-question.active').forEach(q => {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+            });
+            
+            // Toggle current item if it wasn't already active
+            if (!isActive) {
+                element.classList.add('active');
+                answer.classList.add('active');
+            }
+        }
+
+        // Add click listeners to all FAQ questions
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => toggleFAQ(question));
+        });
+    </script>
+</body>
+</html>
